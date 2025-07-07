@@ -11,3 +11,7 @@ experiments filter=lfs diff=lfs merge=lfs -text
 main.py filter=lfs diff=lfs merge=lfs -text
 notebooks filter=lfs diff=lfs merge=lfs -text
 README.md filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text
+*.ipynb filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
