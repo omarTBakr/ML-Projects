@@ -63,5 +63,5 @@ if __name__ == "__main__":
             model=grid.best_estimator_,
             params=grid.best_params_,
             metrics=calc_scores(grid.best_estimator_, x_val, y_val),
-            model_name="LogisticRegressionWithFocalLoss",
+            model_name="NNWithFocalLoss",
         )

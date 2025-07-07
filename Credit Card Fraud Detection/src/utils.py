@@ -14,7 +14,7 @@ from sklearn.metrics import (
     average_precision_score,
     f1_score,
     auc,)
-
+import  sklearn
 
 
 
@@ -28,7 +28,11 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import make_scorer, f1_score
 import sklearn
 from sklearn.base import BaseEstimator, ClassifierMixin
-from src.custom_classes import LogisticRegressionTorch , LogisticRegressionWithFocalLoss,CustomVotingClassifier
+from src.custom_classes import (LogisticRegressionTorch ,
+                                LogisticRegressionWithFocalLoss,
+                                CustomVotingClassifier ,
+                                NNWithFocalLoss,
+                                NNTorch)
 import  xgboost , catboost
 
 
@@ -290,11 +294,15 @@ def load_model(model_name: str, load_metric=False):
     return loaded_model
 
 
-def load_models_eval(models_names: list, x, y, score: sklearn.metrics):
+def load_models_eval(models_names: list, x, y, scores: sklearn.metrics):
     loaded_models = []
     for model_name in models_names:
         model = load_model(model_name, load_metric=False)
-        loaded_models.append((model, score(y_true=y, y_pred=model.predict(x))))
+        y_pred = model.predict(x).reshape(-1,1)
+
+
+        final_score = scores(y_true=y, y_pred=y_pred)
+        loaded_models.append((model, final_score))
 
     return loaded_models
 

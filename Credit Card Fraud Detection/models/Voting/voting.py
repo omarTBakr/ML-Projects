@@ -16,21 +16,22 @@ from src.utils import (
     load_split_train_splitted,  # Loads training split
     load_split_test_splitted,  # Loads test split
     save_experiment,  # Saves experiment results
+
 )
 
+# for loading models
 from src.custom_classes import (
     CustomVotingClassifier,
-)  # Custom voting classifier supporting weights
+    NNTorch,
+    NNWithFocalLoss ,
+    LogisticRegressionWithFocalLoss ,
+    LogisticRegressionTorch
+)
 
 from sklearn.metrics import f1_score
 import xgboost, catboost, lightgbm
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
-
-from models.LogesticRegression.focalloss import (
-    LogisticRegressionWithFocalLoss,
-    LogisticRegressionTorch,
-)  # Essential for loading and rebuilding saved models
 
 from sklearn.metrics import f1_score
 import numpy as np
@@ -53,13 +54,14 @@ model_names = [
     "xgboost",
     "xgboostrf",
     "logisticregressionwithfocalloss",
-    "knn"
+    "knn" ,
+    "NNWithFocalLoss"
 ]
 # model_score_trainval = load_models_eval(models_names=model_names, x=x_train_val, y=y_train_val, score=f1_score)
 
 # Evaluate models on validation data and extract their scores
 model_score_val = load_models_eval(
-    models_names=model_names, x=x_val, y=y_val, score=f1_score
+    models_names=model_names, x=x_val, y=y_val, scores=f1_score
 )
 scores = [item[-1] for item in model_score_val]
 
