@@ -1,0 +1,48 @@
+# --- Byte-compiled / optimized / C extensions ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# --- Virtual Environments ---
+# A folder containing all installed packages, should never be tracked.
+.venv/
+venv/
+env/
+
+
+# --- IDE / Editor specific files ---
+# Contains user-specific settings for PyCharm and VSCode
+.idea/
+.vscode/
+
+
+# --- Experiment and Model Artifacts ---
+# These are outputs of running the code, not the source code itself.
+# They are often large and can be regenerated.
+experiments/
+catboost_info/
+
+
+# --- Notebook Checkpoints ---
+# Temporary backup files created by Jupyter
+.ipynb_checkpoints/
+
+
+# --- Build and Distribution Artifacts ---
+# Common folders for Python package distribution
+build/
+dist/
+*.egg-info/
+
+
+# --- Log Files ---
+*.log
+*.log.*
+
+
+# --- OS-specific files ---
+# Ignore macOS and Windows specific system files
+.DS_Store
+Thumbs.db
