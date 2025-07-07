@@ -4,7 +4,7 @@
 
 # New York Taxi Trip Duration
 
-In this project, we will examine the "New York City Taxi Trip Duration" dataset. The original dataset and competition details can typically be found on platforms like Kaggle (you may want to replace `[here](project-nyc-taxi-trip-duration)` with the specific link if `project-nyc-taxi-trip-duration` is a local folder reference).
+In this project, we will examine the "New York City Taxi Trip Duration" dataset. The original dataset and competition details can be found on   Kaggle [here](https://www.kaggle.com/competitions/nyc-taxi-trip-duration)
 
 ## Data Fields
 
