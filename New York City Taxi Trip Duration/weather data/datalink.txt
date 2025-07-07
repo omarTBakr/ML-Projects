@@ -1,1 +1,0 @@
-https://www.kaggle.com/datasets/mathijs/weather-data-in-new-york-city-2016?resource=download&select=weather_data_nyc_centralpark_2016%281%29.csv
