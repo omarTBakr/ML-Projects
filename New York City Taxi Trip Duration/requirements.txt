@@ -1,0 +1,9 @@
+astral==2.2
+geopy==2.4.1
+holidays==0.73
+numpy==2.3.1
+pandas==2.3.0
+Requests==2.32.4
+scikit_learn==1.7.0
+Shapely==2.1.1
+tqdm==4.67.1
